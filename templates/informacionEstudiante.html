@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Información</title>
+        <!-- CSS Bootstrap-->
+        <link rel="stylesheet" href="../static/bootstrap.min.css">
+            <!-- CSS hecho por nosotros-->
+        <link rel="stylesheet" href="../static/style.css" <!--JS bootstrap-->
+        <!-- CSS para el header -->
+        <link href="../static/headers.css" rel="stylesheet"">
+        <!-- Se carga el favicon de la página-->
+        <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+    </head>
+    
+    <body>
+        <!-- Container-xxl es el contenedor principal-->
+        <div class="container-xxl">
+            <!-- dividimos la pagina en filas (row) y columnas (col)-->
+            <!-- La fila row banner tiene una sola columna la cual es la cabezera(banner)-->
+            <!-- Cada ancho de fila se divide en 12 grid(col-12) por lo cual a cada columna de cada fila se le asigna un col-numero-->
+    
+            <div class="row banner">
+                <div class="col-12 banner"><img src="/static/images/uptc.png" height="100" alt=""></div>
+            </div>
+            <!-- La fila row cuerpo abarca todo el cuerpo de la pagina debado del banner y encima del pie de pagina(footer)-->
+            <div class="row cuerpo">
+                <!-- La columna menubar tiene tamaño 2 y en ella se va a ubicar el menu tipo sidebar a la izquierda-->
+                <div class="col-2 menubar">
+                    <div class="d-flex">
+                        <div id="sidebar-container" class="bg-primary">
+                            <div class="logo" mb-3>
+                                <center> <img src="/static/images/usuario.png" height="80"></center>
+                                <center>
+                                    <h4 class="text-light">Hola estudiante</h4>
+                                </center>
+                            </div>
+    
+                            <div class="menu mb-5 list-group ">
+    
+                                <a href="\homeEstudiante"class="list-group-item list-group-item-action enlaces">Inicio</a>
+                                <a href="\registroAsignatura" class="list-group-item list-group-item-action enlaces">Registro asignatura</a>
+                                <a href="\verNotasEstudiante" class="list-group-item list-group-item-action enlaces">Ver notas</a>
+                                <a href="\informacionEstudiante" class="list-group-item list-group-item-action enlaces">Información</a>
+    
+                            </div>
+
+                    <center><button type="button" onclick="window.location.href='/'" class="btn btn-warning mb-5 color_fondo ">Cerrar sesion</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <!-- La columna centroCuerpo abarca el espacio entre el menubar y el calendario-actividades-->
+            <div class="col-7 centroCuerpo"> 
+                <div class="row"><center><h2><br>Información estudiante</h2> </center></div>
+                <div class="formulario">
+                    <form class="color_background" action="" method="get" name="formCovid" onsubmit="" > 
+                        <div class=" contenedor-campoInf">
+                        <div class="campo">
+                            <label> Nombres </label>
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            autofocus
+                            required
+                            placeholder="Nombres"
+                        />
+                        </div>
+
+                        <div class="campo">
+                            <label> Apellidos</label>
+                            <input
+                            type="text"   
+                            name="Apellidos"
+                            id="Apellidos"
+                            required
+                            placeholder="Apellidos"
+                            />
+                        </div>
+
+                                                
+                        <div class="campo">
+                            <label> Tipo de documento</label>
+                            <select title="TipoDocmento"
+        
+                                <option value="1">CC</option>
+                                
+                                <option value="2">CE</option>
+                                
+                                <option value="3">TI</option>
+                                
+                                </select>
+                        </div>
+
+
+                        <div class="campo">
+                            <label> Numero de doc</label>
+                            <input
+                            type="number"   
+                            name="NumeroDocumento"
+                            id="NumeroDocumento"
+                            required
+                            placeholder="Numero de documento"
+                            />
+                        </div>
+
+                        <div class="campo_fechas" >
+                            <label> Fecha expedición</label>
+                            <input
+                            type="date"   
+                            name="FechaExpedicion"
+                            id="FechaExpedicion"
+                            required
+                            placeholder="Fecha de expedicion"
+                            />
+                        </div>
+
+                        <div class="campo_fechas" >
+                            <label> Fecha de nacimiento</label>
+                            <input
+                            type="date"   
+                            name="Fechanacimiento"
+                            id="FechaNaciomiento"
+                            required
+                            placeholder="Fecha de nacimiento"
+                            />
+                        </div>
+
+                        <div class="campo" >
+                            <label> Dirreción</label>
+                            <input
+                            type="text"   
+                            name="Dirrecion"
+                            id="Dirrecion"
+                            required
+                            placeholder="Dirrecion"
+                            />
+                        </div>
+
+                        <div class="campo">
+                            <label> Numero de telefono</label>
+                            <input
+                            type="tel"   
+                            name="NumeroTel"
+                            id="NumeroTel"
+                            required
+                            placeholder="Numero de telefono"
+                            />
+                        </div>
+
+                        <div class="campo">
+                            <label> Tipo de sangre</label>
+                            <input
+                            type="text"   
+                            name="TipoSangre"
+                            id="TipoSangre"
+                            required
+                            placeholder="Tipo de sangre"
+                            />
+                        </div>
+
+                        <div class="campo">
+                            <label>Estado civil</label>
+                            <input
+                            type="text"   
+                            name="EstadoCivil"
+                            id="EstadoCivil"
+                            required
+                            placeholder="EstadoCivil"
+                            />
+                        </div>
+
+                        <div class="campo">
+                            <label> Acerca de mí</label>
+                            <textarea class="input-text"> </textarea>
+                        </div>
+
+                       
+                            <button class="btn-primary" type="submit">Guardar</button>
+                            <button class="btn-primary" type="reset">Cancelar</button>
+                        
+                    </div>
+                </form>
+                
+                </div>
+            </div>
+            <!-- Final de cuerpo central -->
+            <!-- La columna actividades abarca el calendario y la lista de actividades-->    
+            <div class="col-3 actividades">
+        <!-- La columna actividades a su vez se divide en dos filas, una para calendario y otra para actividades-->
+        <!-- En la fila calendario se agrega un calendario proporcionado por google-->
+                <div class="row mb-4 calendario">
+                    
+                    <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FBogota&showTitle=0&showTabs=0&showCalendars=0&showTz=0&showPrint=0&showDate=0&showNav=1&src=YWxlbnVuZXowOTdAZ21haWwuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMuY28jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y2xhc3Nyb29tMTA3MDYxNTUzOTc2NjM5NDYyMjExQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%2333B679&color=%230B8043&color=%23c26401" style="border:solid 0px #777" width="274rem" height="400rem" padding="1rem" frameborder="0" scrolling="no"></iframe></div>
+        <!-- En la fila listaActividades se crean varias filas de botones-->
+                <div class="row mb-4  listaActividades" ><center><h3>Lista de actividades</h3></center>
+                    <div class="row bottom">  <button type="button" class="btn btn-warning mb-5 color_fondo">Actividad 1</button></div>
+                    <div class="row bottom"><button type="button" class="btn btn-warning mb-5 color_fondo">Actividad  2</button></div>
+                    <div class="row bottom"><button type="button" class="btn btn-warning mb-5 color_fondo">Actividad  3</button></div>
+                    <div class="row bottom"><button type="button" class="btn btn-warning mb-5 color_fondo">Actividad  4</button></div>
+                </div>
+            </div>
+        
+        </div>
+        <!-- La fila row footer se divide en 3 columnas-->
+        <div class="row footer">
+            <div class="col-3 "> &nbsp<br> <center><a href="https://www.facebook.com/universidaduptc" target="_blank"><img src="/static/images/facebook.png" height="30" alt=""></a> <a href="https://www.instagram.com/universidaduptc/" target="_blank"> <img src="/static/images/instagram.png" height="30" alt=""></a><a href="https://twitter.com/universidaduptc" target="_blank"><img src="/static/images/twitter.png" height="30" alt=""></a></center></div>
+            <div class="col-6 "> <center> <p style="color:#ffffff; font-weight: bold;"> <br>Universidad pedagógica y tecnológica de Colombia <br> Todos los derechos reservados®</p></center></div>
+            <div class="col-3 "><img src="/static/images/uptc.png" height="100" alt=""></div>
+        </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

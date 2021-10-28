@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperar contraseña</title>
+    <!-- CSS Bootstrap-->
+    <link rel="stylesheet" href="../static/bootstrap.min.css" />
+    <!-- CSS hecho por nosotros-->
+    <link rel="stylesheet" href="../static/style.css" />
+    <!-- Se carga el favicon de la página-->
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- Container-xxl es el contenedor principal-->
+    <div class="container-xxl">
+      <!-- dividimos la pagina en filas (row) y columnas (col)-->
+      <!-- La fila row banner tiene una sola columna la cual es la cabezera(banner)-->
+      <!-- Cada ancho de fila se divide en 12 grid(col-12) por lo cual a cada columna de cada fila se le asigna un col-numero-->
+      <div class="row menu">
+        <div class="col-12 banner">
+          <img src="../img/uptc.png" height="100" alt="" />
+        </div>
+      </div>
+      <!-- La fila row cuerpo abarca todo el cuerpo de la pagina debado del banner y encima del pie de pagina(footer)-->
+      <div class="row cuerpoInicioSesion">
+        <div class="col-3"></div>
+        <!-- Se le agrega un tamaño a la columna col-6 form para que está quede en el medio y centrada-->
+        <div class="col-6 form">
+          <br>
+          <form>
+            <div class="s">
+              <label for="exampleInputEmail1" class="form-label" 
+                ><center>Recordar contraseña</center></label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Ingrese cu correo para recordar contraseña" autocomplete="email"
+                required
+                autofocus
+              />
+            </div>
+            <center>
+              <button class="btn-primary" type="submit">Enviar contraseña</button>
+            </center>
+          </form>
+        </div>
+        <div class="col-2"></div>
+      </div>
+      <!-- La fila row footer se divide en 3 columnas-->
+
+      <div class="row footer">
+        <div class="col-3">
+          &nbsp<br />
+          <center>
+            <a href="https://www.facebook.com/universidaduptc" target="_blank"
+              ><img src="../img/facebook.png" height="30" alt=""
+            /></a>
+            <a
+              href="https://www.instagram.com/universidaduptc/"
+              target="_blank"
+            >
+              <img src="../img/instagram.png" height="30" alt="" /></a
+            ><a href="https://twitter.com/universidaduptc" target="_blank"
+              ><img src="../img/twitter.png" height="30" alt=""
+            /></a>
+          </center>
+        </div>
+        <div class="col-6">
+          <center>
+            <p style="color: #ffffff; font-weight: bold">
+              <br />Universidad pedagógica y tecnológica de Colombia <br />
+              Todos los derechos reservados®
+            </p>
+          </center>
+        </div>
+        <div class="col-3"><img src="../img/uptc.png" height="100" alt="" /></div>
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

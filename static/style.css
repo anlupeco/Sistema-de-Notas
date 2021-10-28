@@ -1,0 +1,249 @@
+:root {
+  --primary: #e7dcdc;
+  --margin-left: 0rem;
+  --colorNav: #ffdb38;
+}
+
+.banner {
+  background-color: #ffdb38;
+}
+.footer {
+  background-color: #0f0f0f;
+}
+.cuerpo {
+  margin-bottom: 0rem;
+  margin-left: -2rem;
+}
+.cuerpoInicioSesion {
+  margin-bottom: 5rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+form {
+  width: 14cm;
+  padding: 16px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: #b7b9b7;
+  
+}
+.container {
+  padding: 1;
+}
+
+.btn-primary {
+  text-decoration: none;
+  padding: px;
+  height: 2em;
+  width: 12rem;
+  font-weight: 600;
+  font-size: 20px;
+  color: #0f0f0f;
+  background: #ffdb38;
+  border-radius: 6px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0rem;
+}
+.btn-estudiante {
+  text-decoration: none;
+  padding: px;
+  height: 2em;
+  width: 95%;
+  font-weight: 600;
+  font-size: 20px;
+  color: #0f0f0f;
+  background: #ffdb38;
+  border-radius: 6px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0rem;
+}
+
+
+.bottom{
+
+  padding: 1rem 1rem;
+  margin-top: 1rem;
+  margin-left: .2rem;
+  font-size:  1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: .5rem;
+ 
+}
+
+.bg-primary {
+  margin-left: 0rem;
+  background-color: var(--primary) !important;
+  margin-left: var(--margin-left) !important;
+  color: black;
+}
+#menu.hover {
+  text-decoration: none;
+  color: #0f0f0f;
+}
+#sidebar-container {
+  min-height: 150vh;
+  width: 40vh;
+  margin-top: 0rem;
+  color: #0f0f0f;
+}
+.H4 {
+  color: #0f0f0f;
+}
+#sidebar-container .logo {
+  padding: 0.875rem;
+  color: #0f0f0f;
+}
+#sidebar-container .menu {
+  margin-left: 0rem;
+  padding: 1rem;
+  color: #0f0f0f;
+}
+
+.linea {
+  border: 21px solid green;
+}
+.actividades {
+  background-color: #e7dcdc;
+}
+
+.contenedor{
+  max-width: 120rem;
+  margin: 0 auto 0 auto;
+  /* text-align: center; */
+}
+
+.servicios{
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  column-gap: 1rem;
+}
+
+.servicio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+
+.servicio .icono{
+  height: 10rem;
+  width: 10rem;
+  background-color: var(--colorNav);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.enlaces{
+  text-decoration: none;
+  background-color: var(--primary);
+}
+
+.images{
+  align-items: flex-end;
+}
+.color_fondo{
+background-color: #ffdb38;
+}
+
+.color_background{
+  background-color: var(--primary);
+  }
+
+.formulario{
+  background-color:var(--primary);
+  width: min( 40rem, 100%); /* */
+  margin:  0 auto;
+  padding: 2rem ;
+  border-radius: 1rem;
+  }
+    
+  
+  .formulario legend{
+  border: none
+  }
+  
+  .formulario legend{
+  text-align: center;
+  font-size:  1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: black;
+  }
+  
+  @media (min-width: 768px) { 
+    
+    .contenedor-campo{
+        /* display: grid;
+        50% 50% */
+        grid-template-columns: 1fr 1fr;    
+        column-gap: 1rem;
+        grid-template-rows: auto auto 20rem;    
+        align-content: center;
+    }   
+ 
+  /* Unir las celdas del grid formulario */
+  .campo:nth-child(11), .campo:nth-child(12 ){
+    grid-column: 1/3;
+    }
+    
+    }
+
+    @media (min-width: 768px) { 
+    
+      .contenedor-campoInf{
+          display: grid;
+          /* 50% 50% */
+          grid-template-columns: 1fr 1fr;    
+          column-gap: 1rem;
+          grid-template-rows: auto auto 5rem;    
+      }   
+      
+      }
+
+    .campo{
+    margin-bottom: 1rem;
+    display:  grid;
+    
+    }
+
+    .campo_fechas{
+      margin-bottom: 1rem;
+      /* display:  grid; */
+      
+      }
+      
+ .campo_fechas label{
+        color: azure;
+        font-weight: bold;
+       
+        display: block;
+        } 
+
+    .campo label{
+    color: azure;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+    }
+
+    .contenedor-cursos{
+      background-color:var(--primary);
+      width: min( 40rem, 100%); /* */
+      margin:  0 auto;
+      padding: 2rem ;
+      border-radius: 1rem;
+      }
+.date{
+  width: 100%;
+}

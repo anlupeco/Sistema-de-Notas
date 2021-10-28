@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear usuario</title>
+    <!-- CSS Bootstrap-->
+    <link rel="stylesheet" href="../static/bootstrap.min.css">
+        <!-- CSS hecho por nosotros-->
+    <link rel="stylesheet" href="../static/style.css" <!--JS bootstrap-->
+    <!-- CSS para el header -->
+    <link href="../static/headers.css" rel="stylesheet"">
+    <!-- Se carga el favicon de la página-->
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+    <!-- Container-xxl es el contenedor principal-->
+    <div class="container-xxl">
+      <!-- dividimos la pagina en filas (row) y columnas (col)-->
+          <!-- La fila row banner tiene una sola columna la cual es la cabezera(banner)-->
+              <!-- Cada ancho de fila se divide en 12 grid(col-12) por lo cual a cada columna de cada fila se le asigna un col-numero-->
+                <!-- Header personalizado -->
+                  <header class="p-2 border-bottom row banner ">
+                      <div class="container">
+                        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                              <img src="/static/images/uptc.png" alt="100" width="150">
+                          </a>
+                  
+                  
+                  
+                          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 color_fondo">
+                            <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search">
+                          </form>
+                  
+                          <div class="dropdown text-end">
+                            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img src="/static/images/usuario.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                            </a>
+                            <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                              <li><a class="dropdown-item" href="#">New project...</a></li>
+                              <li><a class="dropdown-item" href="#">Settings</a></li>
+                              <li><a class="dropdown-item" href="#">Profile</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#">Sign out</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </header>
+      
+              <!-- La fila row cuerpo abarca todo el cuerpo de la pagina debado del banner y encima del pie de pagina(footer)-->
+              <div class="row cuerpo">
+              <!-- La columna menubar tiene tamaño 2 y en ella se va a ubicar el menu tipo sidebar a la izquierda-->
+                   <div class="col-2 menubar">
+                      <div class= "d-flex">
+                          <div id="sidebar-container" class= "bg-primary">
+                                  <div class="logo" mb-3><center>    <img src="/static/images/usuario.png"height="80" ></center>    
+                                      <center><h4 class="text-light" >Hola usuario</h4></center> 
+                                  </div>
+      
+                                  <div class="menu mb-5 list-group ">
+                                      
+                                      <a href="\dashboard" class="list-group-item list-group-item-action enlaces">Inicio</a>
+                                      <a href="\BuscarCursosAdministrador" class="list-group-item list-group-item-action enlaces">Buscar cursos</a>
+                                      <a href="\BuscarUsuarioAdministrador" class="list-group-item list-group-item-action enlaces">Buscar usuario</a>
+                                      <a href="\BuscarAsignaturaAdministrador" class="list-group-item list-group-item-action enlaces">Buscar asignatura</a>
+                                      <a href="crearCursos" class="list-group-item list-group-item-action enlaces">Crear cursos</a>
+                                      <a href="registro" class="list-group-item list-group-item-action enlaces">Crear usuario</a>
+                                      <a href="crearAsignatura" class="list-group-item list-group-item-action enlaces">Crear asignatura</a>
+                                      <a href="informacionAdministrador" class="list-group-item list-group-item-action enlaces">Información</a>
+                                      
+                                  </div>
+
+                            <center><button type="button" onclick="window.location.href='/'" class="btn btn-warning mb-5 color_fondo ">Cerrar sesion</button></center>
+                    </div>
+                </div>
+            </div>
+        <!-- La columna centroCuerpo abarca el espacio entre el menubar y el calendario-actividades-->
+                    <div class="col-7 centroCuerpo"> 
+                      <center><h2><br>Crear nuevo usuario</h2> </center>
+                      <div class="row">
+                      
+                      <center>
+                        <h4><br/>Complete todos los campos para crear la cuenta</h4>
+                        <form action="{{ url_for('registar')}}" method="post" name="formRegistro" >  
+                          <p>
+                            <input
+                              type="number"
+                              size="10"
+                              name="codigo"
+                              id="codigo"
+                              autofocus
+                              minlength="3"
+                              maxlength="30"
+                              required
+                              placeholder="codigo"
+                            /></p>
+                          <p>
+                          <input
+                            type="text"
+                            size="35"
+                            name="name"
+                            id="name"
+                            autofocus
+                            minlength="3"
+                            maxlength="30"
+                            required
+                            placeholder="Nombres"
+                          /></p>
+                          <p>
+                          <input
+                          type="text"
+                          size="35"
+                          name="apellido"
+                          id="apellido"
+                          minlength="2"
+                          maxlength="30"
+                          required
+                          placeholder="Apellidos"
+                        /></p>
+                        <p style="font-weight: bold;">Tipo de documento: 
+                            <select name="tipoDocumento">
+            
+                                <option value="1">CC</option>
+                                
+                                <option value="2">CE</option>
+                                
+                                <option value="3">TI</option>
+                                
+                                </select>
+                        </p>
+                        <p>
+                            <input type="number" size="35" required name="num_doc" id="num_doc" placeholder="Numero de documento" >
+                        </p>
+                        <p>
+                          <input type="password" name="password" id="password" placeholder="Contraseña temporal" minlength="3" required>
+                      </p>
+                        <p>
+                            <input type="email" name="mail" id="mail" placeholder="E-mail" minlength="3" required>
+                        </p>
+                        <p style="font-weight: bold;">Fecha de nacimiento:
+                            <input type="date" name="fecha_nac" id="fecha_nac" required>
+                        </p>
+
+                        <p>
+                          <p style="font-weight: bold;">Tipo de usuario 
+                            <select name="TipoUsuario">
+            
+                                <option value="1">Estudiante</option>
+                                
+                                <option value="2">Profesor</option>
+                                
+                                <option value="3">Admin</option>
+                                
+                                </select>
+                        </p>
+
+                            <button class="btn-primary" type="submit">Crear usuario</button>
+                            <button class="btn-primary" type="reset">Cancelar</button>
+                        </p>
+                        </center>
+
+                        {%with messages = get_flashed_messages() %}
+                        {% if messages%}
+                        {% for message in messages %}
+                        <p>
+                          {{message}}
+                        </p>
+                        {% endfor%}
+                        {% endif%}
+                        {% endwith%}
+                    </div>
+        <!-- La columna actividades abarca el calendario y la lista de actividades-->
+                    </div>
+
+                    
+            <div class="col-3 actividades">
+        <!-- La columna actividades a su vez se divide en dos filas, una para calendario y otra para actividades-->
+        <!-- En la fila calendario se agrega un calendario proporcionado por google-->
+                <div class="row mb-4 calendario">
+                    
+                    <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FBogota&showTitle=0&showTabs=0&showCalendars=0&showTz=0&showPrint=0&showDate=0&showNav=1&src=YWxlbnVuZXowOTdAZ21haWwuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMuY28jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y2xhc3Nyb29tMTA3MDYxNTUzOTc2NjM5NDYyMjExQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%2333B679&color=%230B8043&color=%23c26401" style="border:solid 0px #777" width="274rem" height="400rem" padding="1rem" frameborder="0" scrolling="no"></iframe></div>
+        <!-- En la fila listaActividades se crean varias filas de botones-->
+                <div class="row mb-4  listaActividades" ><center><h3>Lista de tareas</h3></center>
+                    <div class="row bottom">  <button type="button" class="btn btn-warning mb-5 color_fondo">Tarea 1</button></div>
+                    <div class="row bottom"><button type="button" class="btn btn-warning mb-5 color_fondo">Tarea 2</button></div>
+                    <div class="row bottom"><button type="button" class="btn btn-warning mb-5 color_fondo">Tarea 3</button></div>
+                    <div class="row bottom"><button type="button" class="btn btn-warning mb-5 color_fondo">Tarea  4</button></div>
+                </div>
+            </div>
+        
+        </div>
+        <!-- La fila row footer se divide en 3 columnas-->
+        <div class="row footer">
+          <div class="col-3 "> &nbsp<br> <center><a href="https://www.facebook.com/universidaduptc" target="_blank"><img src="/static/images/facebook.png" height="30" alt=""></a> <a href="https://www.instagram.com/universidaduptc/" target="_blank"> <img src="/static/images/instagram.png" height="30" alt=""></a><a href="https://twitter.com/universidaduptc" target="_blank"><img src="/static/images/twitter.png" height="30" alt=""></a></center></div>
+          <div class="col-6 "> <center> <p style="color:#ffffff; font-weight: bold;"> <br>Universidad pedagógica y tecnológica de Colombia <br> Todos los derechos reservados®</p></center></div>
+          <div class="col-3 "><img src="/static/images/uptc.png" height="100" alt=""></div>
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
